@@ -1,6 +1,6 @@
-# docker build -t paulfdunn/rest-app:v0.0.0 .
+# docker build -t paulfdunn/prod1:v0.0.0 .
 # docker login --username paulfdunn
-# docker push paulfdunn/rest-app:v0.0.0
+# docker push paulfdunn/prod1:v0.0.0
 # docker run --name prod1 --network host -it prod1 /bin/ash
 # docker container stop prod1
 # docker container rm prod1

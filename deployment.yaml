@@ -2,31 +2,31 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rest-app
+  name: prod1
   labels:
-    app: rest-app
+    app: prod1
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: rest-app
+      app: prod1
   template:
     metadata:
       labels:
-        app: rest-app
+        app: prod1
     spec:
       containers:
-      - name: rest-app-container
-        image: paulfdunn/rest-app:v0.0.0
+      - name: prod1-container
+        image: paulfdunn/prod1:v0.0.0
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8000
         volumeMounts:
-        - mountPath: "/opt/rest-app/data"
+        - mountPath: "/opt/prod1/data"
           name: data
       imagePullSecrets:
       - name: regcred
       volumes:
         - name: data
           persistentVolumeClaim:
-            claimName: rest-app-pvc      
+            claimName: prod1-pvc      
