@@ -18,8 +18,8 @@ import (
 	"github.com/paulfdunn/authJWT"
 	"github.com/paulfdunn/logh"
 	"github.com/paulfdunn/osh/runtimeh"
-	"github.com/paulfdunn/rest-app/common"
-	"github.com/paulfdunn/rest-app/common/config"
+	"github.com/paulfdunn/rest-app-common"
+	"github.com/paulfdunn/rest-app-common/config"
 )
 
 const (

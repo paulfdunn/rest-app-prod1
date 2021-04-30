@@ -15,8 +15,8 @@ github.com/paulfdunn/neth v0.1.2/go.mod h1:4i22d4i9Xp0l9tOqz6GYOB++BbJ7ed9cgCPts
 github.com/paulfdunn/osh v0.1.0/go.mod h1:kIH+neymml6oX08vwas5j1ICEQ/LjGwTsaZfUXuKUmA=
 github.com/paulfdunn/osh v0.1.1 h1:7t3ogtyw88a4cp5zAKV2BRweLBFMKWxvvjj34140zEI=
 github.com/paulfdunn/osh v0.1.1/go.mod h1:kIH+neymml6oX08vwas5j1ICEQ/LjGwTsaZfUXuKUmA=
-github.com/paulfdunn/rest-app/common v0.0.0-20210430021140-88138cc49e23 h1:nKT38fXljY9PTgq3uLoJUF5RCF/fxUqpe/gmhLZ88eg=
-github.com/paulfdunn/rest-app/common v0.0.0-20210430021140-88138cc49e23/go.mod h1:XAxSJzeXWFmY+ZZsOxnhSjaw32vcXDvBr0AzpNkfHhQ=
+github.com/paulfdunn/rest-app-common v0.0.1 h1:9qyuEgQg5ysYkMkB+slGamSNMopRHWekv6nlpU3W3hw=
+github.com/paulfdunn/rest-app-common v0.0.1/go.mod h1:ojy5/VjOsiAlgYACLScvbn2TKlgRTrFGrtvhjngFpw4=
 golang.org/x/crypto v0.0.0-20210415154028-4f45737414dc/go.mod h1:T9bdIzuCu7OtxOm1hfPfRQxPLYneinmdGuTeoZ9dtd4=
 golang.org/x/crypto v0.0.0-20210421170649-83a5a9bb288b h1:7mWr3k41Qtv8XlltBkDkl8LoP3mpSgBW8BUoxtEdbXg=
 golang.org/x/crypto v0.0.0-20210421170649-83a5a9bb288b/go.mod h1:T9bdIzuCu7OtxOm1hfPfRQxPLYneinmdGuTeoZ9dtd4=
