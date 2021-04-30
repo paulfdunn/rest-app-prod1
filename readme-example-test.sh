@@ -21,7 +21,7 @@ echo -e "\n\ncleanup prior to start"
 cleanup
 
 echo -e "\n\nbuild and run"
-go build
+go build rest-app-prod1
 if [[ $? != 0 ]]; then
     echo "FAILED: go build failed"
     exit

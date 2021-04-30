@@ -24,10 +24,10 @@ RUN apk --no-cache add curl
 RUN apk --no-cache add perl-utils
 EXPOSE 8000
 WORKDIR /app
-COPY --from=builder /go/src/github.com/paulfdunn/rest-app-prod1/prod1 /app/prod1
+COPY --from=builder /go/src/github.com/paulfdunn/rest-app-prod1/rest-app-prod1 /app/rest-app-prod1
 COPY --from=builder /go/src/github.com/paulfdunn/rest-app-prod1/key /app/key
 # DO NOT use "-log-filepath=" with Docker, just let it go to STDOUT.
-CMD ["./prod1",  "-https-port=8000", "-log-level=0", "persistent-directory=/opt/rest-app/data"]
+CMD ["./rest-app-prod1",  "-https-port=8000", "-log-level=0", "persistent-directory=/opt/rest-app/data"]
 
 ###########################################################################
 # 2 stage with Ubuntu - image size: 178 MB
@@ -50,10 +50,10 @@ CMD ["./prod1",  "-https-port=8000", "-log-level=0", "persistent-directory=/opt/
 # RUN apt-get install -y perl
 # EXPOSE 8000
 # WORKDIR /app
-# COPY --from=builder /go/src/github.com/paulfdunn/rest-app-prod1/prod1 /app/prod1
+# COPY --from=builder /go/src/github.com/paulfdunn/rest-app-prod1/rest-app-prod1 /app/rest-app-prod1
 # COPY --from=builder /go/src/github.com/paulfdunn/rest-app-prod1/key /app/key
 # DO NOT use "-log-filepath=" with Docker, just let it go to STDOUT.
-# CMD ["./prod1",  "-https-port=8000", "-log-level=0"]
+# CMD ["./rest-app-prod1",  "-https-port=8000", "-log-level=0"]
 
 ###########################################################################
 # PROBLEMS - Ubuntu build and run on Alpine
@@ -80,8 +80,8 @@ CMD ["./prod1",  "-https-port=8000", "-log-level=0", "persistent-directory=/opt/
 # RUN apk --no-cache add perl-utils
 # EXPOSE 8000
 # WORKDIR /app
-# COPY --from=builder /go/src/github.com/paulfdunn/rest-app-prod1/prod1 /app/prod1
+# COPY --from=builder /go/src/github.com/paulfdunn/rest-app-prod1/rest-app-prod1 /app/rest-app-prod1
 # COPY --from=builder /go/src/github.com/paulfdunn/rest-app-prod1/key /app/key
-# CMD ["./prod1",  "-https-port=8000", "-log-level=0", "-log-filepath=./prod1.log"]
+# CMD ["./rest-app-prod1",  "-https-port=8000", "-log-level=0", "-log-filepath=./prod1.log"]
 
 
