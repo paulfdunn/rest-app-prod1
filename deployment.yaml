@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rest-app
+  labels:
+    app: rest-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: rest-app
+  template:
+    metadata:
+      labels:
+        app: rest-app
+    spec:
+      containers:
+      - name: rest-app-container
+        image: paulfdunn/rest-app:v0.0.0
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
+        volumeMounts:
+        - mountPath: "/opt/rest-app/data"
+          name: data
+      imagePullSecrets:
+      - name: regcred
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: rest-app-pvc      
