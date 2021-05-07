@@ -18,4 +18,4 @@ spec:
     - nfsvers=4.1
   nfs:
     path: /opt/prod1/data
-    server: ec2-3-22-34-165.us-east-2.compute.amazonaws.com
+    server: ec2-3-16-163-139.us-east-2.compute.amazonaws.com
